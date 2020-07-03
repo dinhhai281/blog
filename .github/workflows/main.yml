@@ -25,6 +25,9 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
+    - name: Test
+      run: npm test
+
     # Runs a single command using the runners shell
     - name: Build
       run: npm run build

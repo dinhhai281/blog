@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="container px-5 pt-8 mx-auto"
+  >
+    <header
+      class="flex justify-between items-center mb-8"
+    >
+      <h1
+        class="text-pink-700 text-4xl font-bold leading-10"
+      >
+        <a
+          href="/en/about/"
+        >
+          Onyxia
+        </a>
+      </h1>
+      <div>
+        Mode
+      </div>
+    </header>
+  </div>
+</DocumentFragment>
+`;

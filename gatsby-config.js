@@ -1,7 +1,11 @@
 const tailwindConfig = require('./tailwind.config');
 
 module.exports = {
+  siteMetadata: {
+    author: 'Hai Nguyen'
+  },
   plugins: [
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -16,14 +20,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-postcss',
+      resolve: 'gatsby-plugin-intl',
       options: {
-        postCssPlugins: [
-          require('tailwindcss')(tailwindConfig),
-          require('autoprefixer'),
-          ...(process.env.NODE_ENV === 'production' ? [require('cssnano')] : []),
-        ]
-      }
-    }
+        path: `${__dirname}/src/intl`,
+        languages: ['en', 'vi'],
+        defaultLanguage: 'en',
+        redirect: true,
+      },
+    },
   ],
 };
