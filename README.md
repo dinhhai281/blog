@@ -1,3 +1,5 @@
+![CI](https://github.com/dinhhai281/blog/workflows/CI/badge.svg)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

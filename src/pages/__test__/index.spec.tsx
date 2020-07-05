@@ -1,7 +1,7 @@
 import { render } from '@utils/testing';
 import React from 'react';
 
-import Home, { HomeProps } from '../index';
+import Home, { HomeProps } from '@pages/index';
 
 describe('Home', () => {
   let props: HomeProps;
