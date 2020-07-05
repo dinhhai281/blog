@@ -1,8 +1,15 @@
-const tailwindConfig = require('./tailwind.config');
+
+if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config({
+    path: '.env',
+  });
+}
+
+console.log(process.env.GITHUB_API_KEY);
 
 module.exports = {
   siteMetadata: {
-    author: 'Hai Nguyen'
+    author: 'Hai Nguyen',
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -26,6 +33,22 @@ module.exports = {
         languages: ['en', 'vi'],
         defaultLanguage: 'en',
         redirect: true,
+      },
+    },
+    {
+      resolve: 'gatsby-source-github-api',
+      options: {
+        token: process.env.GITHUB_API_KEY,
+        graphQLQuery: `
+          query { 
+            viewer { 
+              login
+              name
+              avatarUrl
+              email
+            }
+        }
+        `,
       },
     },
   ],

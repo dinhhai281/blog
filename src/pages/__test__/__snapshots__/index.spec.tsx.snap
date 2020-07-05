@@ -25,9 +25,12 @@ exports[`Home render correctly 1`] = `
       class="grid grid-cols-5 gap-2"
     >
       <div
-        class="col-span-1 row-span-2"
+        class="col-span-1 row-span-2 flex items-center"
       >
-        Avatar
+        <img
+          class="p-0 m-0 w-12 h-12 rounded-full"
+          src="testurl"
+        />
       </div>
       <div
         class="col-span-4"
@@ -38,7 +41,7 @@ exports[`Home render correctly 1`] = `
           href="https://github.com/dinhhai281"
           target="_blank"
         >
-          Author
+          test
         </a>
       </div>
       <div

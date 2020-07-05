@@ -18,3 +18,5 @@
 - ### **Typescript**
 
 - ### **TailwindCSS with PostCSS preprocessor**
+
+- ### **Jest ✖️ @testing-library/react**

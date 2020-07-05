@@ -10,9 +10,23 @@ describe('Home', () => {
       data: {
         site: {
           siteMetadata: {
-            author: 'Author',
+            author: 'author',
           },
         },
+        allGithubData: {
+          edges: [
+            { 
+              node: {
+                data: {
+                  viewer: {
+                    name: 'test',
+                    avatarUrl: 'testurl'
+                  }
+                }
+              }
+            }
+          ]
+        }
       },
     };
   });
