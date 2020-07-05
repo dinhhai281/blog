@@ -1,11 +1,10 @@
+import Layout from '@components/layout';
+import { render } from '@utils/testing';
 import React from 'react';
-
-import Layout from '../layout';
-import { renderWithProviders } from './utils/renderWithProviders';
 
 describe('Layout', () => {
   it('renders correctly', () => {
-    const { asFragment } = renderWithProviders(<Layout></Layout>);
+    const { asFragment } = render(<Layout></Layout>);
 
     expect(asFragment()).toMatchSnapshot();
   });

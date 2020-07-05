@@ -1,8 +1,8 @@
-const React = require('react');
-const gatsby = jest.requireActual('gastby');
+import React from 'react';
+const gastby = jest.requireActual('gatsby');
 
 module.exports = {
-  ...gatsby,
+  ...gastby,
   graphql: jest.fn(),
   Link: jest.fn().mockImplementation(
     ({

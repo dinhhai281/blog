@@ -1,9 +1,9 @@
-import React, { FC, useEffect } from 'react';
-import Layout from '../components/layout';
-import { useIntl, changeLocale } from 'gatsby-plugin-intl';
+import Layout from '@components/layout';
 import { graphql } from 'gatsby';
+import { changeLocale, useIntl } from 'gatsby-plugin-intl';
+import React, { FC, useEffect } from 'react';
 
-interface HomeProps {
+export interface HomeProps {
   data: {
     site: {
       siteMetadata: {
