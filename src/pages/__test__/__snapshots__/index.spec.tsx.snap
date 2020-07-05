@@ -39,6 +39,7 @@ exports[`Home render correctly 1`] = `
         <a
           class="underline text-pink-700"
           href="https://github.com/dinhhai281"
+          rel="noreferrer"
           target="_blank"
         >
           test

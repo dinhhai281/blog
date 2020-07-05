@@ -1,4 +1,3 @@
-
 if (process.env.NODE_ENV === 'development') {
   require('dotenv').config({
     path: '.env',
@@ -12,6 +11,7 @@ module.exports = {
     author: 'Hai Nguyen',
   },
   plugins: [
+    'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-filesystem',

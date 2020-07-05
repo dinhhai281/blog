@@ -4,11 +4,9 @@ import Layout from '../components/layout';
 const About: FC = () => {
   return (
     <Layout>
-      <div>
-        About page
-      </div>
+      <div>About page</div>
     </Layout>
-  )
-}
+  );
+};
 
 export default About;

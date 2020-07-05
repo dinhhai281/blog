@@ -15,18 +15,18 @@ describe('Home', () => {
         },
         allGithubData: {
           edges: [
-            { 
+            {
               node: {
                 data: {
                   viewer: {
                     name: 'test',
-                    avatarUrl: 'testurl'
-                  }
-                }
-              }
-            }
-          ]
-        }
+                    avatarUrl: 'testurl',
+                  },
+                },
+              },
+            },
+          ],
+        },
       },
     };
   });

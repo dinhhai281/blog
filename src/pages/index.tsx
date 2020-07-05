@@ -37,7 +37,7 @@ const Home: FC<HomeProps> = ({ data }) => {
       <div className='grid grid-cols-5 gap-2'>
         <div className='col-span-1 row-span-2 flex items-center'>
           <img
-            className="p-0 m-0 w-12 h-12 rounded-full"
+            className='p-0 m-0 w-12 h-12 rounded-full'
             src={data.allGithubData.edges[0].node.data.viewer.avatarUrl}
           />
         </div>
@@ -46,6 +46,7 @@ const Home: FC<HomeProps> = ({ data }) => {
           &nbsp;
           <a
             href='https://github.com/dinhhai281'
+            rel='noreferrer'
             target='_blank'
             className='underline text-pink-700'
           >

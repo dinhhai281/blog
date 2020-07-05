@@ -1,12 +1,29 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "module": "CommonJS",
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "jsx": "preserve",
     "esModuleInterop": true,
     "baseUrl": "src",
     "paths": {
       "@utils/*": ["./utils/*"],
       "@components/*": ["./components/*"],
       "@pages/*": ["./pages/*"]
-    }
-  }
+    },
+    "strict": true,
+    "noEmit": true,
+    "noUnusedLocals": false,
+    "types": ["jest"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "public",
+    ".cache",
+    "__mocks"
+  ]
 }
