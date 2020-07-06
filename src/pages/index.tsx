@@ -1,13 +1,14 @@
 import Layout from '@components/layout';
 import { graphql } from 'gatsby';
 import { changeLocale, useIntl } from 'gatsby-plugin-intl';
-import React, { FC, useEffect } from 'react';
+import React, { FC, useEffect, useCallback } from 'react';
 
 export interface HomeProps {
   data: {
     site: {
       siteMetadata: {
         author: string;
+        githubUrl: string;
       };
     };
     allGithubData: {
@@ -32,28 +33,35 @@ const Home: FC<HomeProps> = ({ data }) => {
     console.log(data.allGithubData.edges[0].node.data.viewer.avatarUrl);
   }, [locale]);
 
+  const handleAvatarClick = useCallback(() => {
+    window.open(data.site.siteMetadata.githubUrl, '_blank');
+  }, []);
+
   return (
     <Layout>
-      <div className='grid grid-cols-5 gap-2'>
-        <div className='col-span-1 row-span-2 flex items-center'>
+      <div className='flex'>
+        <div className='flex items-center pr-2'>
           <img
-            className='p-0 m-0 w-12 h-12 rounded-full'
+            className='p-0 m-0 w-12 h-12 rounded-full cursor-pointer'
             src={data.allGithubData.edges[0].node.data.viewer.avatarUrl}
+            onClick={handleAvatarClick}
           />
         </div>
-        <div className='col-span-4'>
-          {formatMessage({ id: 'headline_1' })}
-          &nbsp;
-          <a
-            href='https://github.com/dinhhai281'
-            rel='noreferrer'
-            target='_blank'
-            className='underline text-pink-700'
-          >
-            {data.allGithubData.edges[0].node.data.viewer.name}
-          </a>
+        <div className='pl-2'>
+          <div>
+            {formatMessage({ id: 'headline_1' })}
+            &nbsp;
+            <a
+              href={data.site.siteMetadata.githubUrl}
+              rel='noreferrer'
+              target='_blank'
+              className='underline text-pink-700'
+            >
+              {data.allGithubData.edges[0].node.data.viewer.name}
+            </a>
+          </div>
+          <div>{formatMessage({ id: 'headline_2' })}</div>
         </div>
-        <div className='col-span-4'>{formatMessage({ id: 'headline_2' })}</div>
       </div>
     </Layout>
   );
@@ -80,6 +88,7 @@ export const query = graphql`
     site {
       siteMetadata {
         author
+        githubUrl
       }
     }
   }

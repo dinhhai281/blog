@@ -8,7 +8,7 @@ const Layout: FC = ({ children }) => {
         <h1 className='text-pink-700 text-4xl font-bold leading-10'>
           <Link to='/about/'>Onyxia</Link>
         </h1>
-        <div>Mode</div>
+        <div>&nbsp;</div>
       </header>
       {children}
     </div>

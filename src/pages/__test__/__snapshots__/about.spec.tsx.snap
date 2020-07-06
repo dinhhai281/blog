@@ -18,7 +18,7 @@ exports[`About render correctly 1`] = `
         </a>
       </h1>
       <div>
-        Mode
+         
       </div>
     </header>
     <div>

@@ -18,37 +18,37 @@ exports[`Home render correctly 1`] = `
         </a>
       </h1>
       <div>
-        Mode
+         
       </div>
     </header>
     <div
-      class="grid grid-cols-5 gap-2"
+      class="flex"
     >
       <div
-        class="col-span-1 row-span-2 flex items-center"
+        class="flex items-center pr-2"
       >
         <img
-          class="p-0 m-0 w-12 h-12 rounded-full"
+          class="p-0 m-0 w-12 h-12 rounded-full cursor-pointer"
           src="testurl"
         />
       </div>
       <div
-        class="col-span-4"
+        class="pl-2"
       >
-        headline_1 
-        <a
-          class="underline text-pink-700"
-          href="https://github.com/dinhhai281"
-          rel="noreferrer"
-          target="_blank"
-        >
-          test
-        </a>
-      </div>
-      <div
-        class="col-span-4"
-      >
-        headline_2
+        <div>
+          headline_1 
+          <a
+            class="underline text-pink-700"
+            href="githuburl"
+            rel="noreferrer"
+            target="_blank"
+          >
+            test
+          </a>
+        </div>
+        <div>
+          headline_2
+        </div>
       </div>
     </div>
   </div>

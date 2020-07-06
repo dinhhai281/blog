@@ -4,15 +4,15 @@ if (process.env.NODE_ENV === 'development') {
   });
 }
 
-console.log(process.env.GITHUB_API_KEY);
-
 module.exports = {
   siteMetadata: {
     author: 'Hai Nguyen',
+    githubUrl: 'https://github.com/dinhhai281',
   },
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

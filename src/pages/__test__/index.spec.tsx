@@ -11,6 +11,7 @@ describe('Home', () => {
         site: {
           siteMetadata: {
             author: 'author',
+            githubUrl: 'githuburl',
           },
         },
         allGithubData: {
