@@ -2,6 +2,7 @@ import Layout from '@components/layout';
 import { graphql } from 'gatsby';
 import { changeLocale, useIntl } from 'gatsby-plugin-intl';
 import React, { FC, useEffect, useCallback } from 'react';
+import BlogItem from '@components/blog-item';
 
 export interface HomeProps {
   data: {
@@ -10,6 +11,19 @@ export interface HomeProps {
         author: string;
         githubUrl: string;
       };
+    };
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          id: string;
+          excerpt: string;
+          frontmatter: {
+            date: string;
+            path: string;
+            title: string;
+          };
+        };
+      }[];
     };
     allGithubData: {
       edges: {
@@ -26,11 +40,14 @@ export interface HomeProps {
   };
 }
 
+type SiteData = Pick<HomeProps['data'], 'site'>['site'];
+type AllMarkdownRemark = Pick<HomeProps['data'], 'allMarkdownRemark'>['allMarkdownRemark'];
+type AllGithubData = Pick<HomeProps['data'], 'allGithubData'>['allGithubData'];
+
 const Home: FC<HomeProps> = ({ data }) => {
   const { formatMessage, locale } = useIntl();
   useEffect(() => {
     changeLocale(locale);
-    console.log(data.allGithubData.edges[0].node.data.viewer.avatarUrl);
   }, [locale]);
 
   const handleAvatarClick = useCallback(() => {
@@ -39,7 +56,7 @@ const Home: FC<HomeProps> = ({ data }) => {
 
   return (
     <Layout>
-      <div className='flex'>
+      <section className='flex'>
         <div className='flex items-center pr-2'>
           <img
             className='p-0 m-0 w-12 h-12 rounded-full cursor-pointer'
@@ -62,7 +79,18 @@ const Home: FC<HomeProps> = ({ data }) => {
           </div>
           <div>{formatMessage({ id: 'headline_2' })}</div>
         </div>
-      </div>
+      </section>
+      <section className='flex mt-6 flex-col'>
+        {data.allMarkdownRemark.edges
+          .sort((a, b) =>
+            [a.node.frontmatter.date, b.node.frontmatter.date].map(Date.parse).reduce((acc, cur) => cur - acc)
+          )
+          .map(({ node }) => (
+            <div key={node.id} className='mb-6'>
+              <BlogItem source={node} />
+            </div>
+          ))}
+      </section>
     </Layout>
   );
 };
@@ -85,10 +113,25 @@ export const query = graphql`
         }
       }
     }
+
     site {
       siteMetadata {
         author
         githubUrl
+      }
+    }
+
+    allMarkdownRemark(filter: {}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date
+            path
+            title
+          }
+          excerpt
+        }
       }
     }
   }

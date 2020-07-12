@@ -1,6 +1,10 @@
 import Layout from '@components/layout';
-import { render } from '@utils/testing';
+import { layoutMockSetup, render } from '@utils/testing';
 import React from 'react';
+
+beforeAll(() => {
+  layoutMockSetup();
+});
 
 describe('Layout', () => {
   it('renders correctly', () => {

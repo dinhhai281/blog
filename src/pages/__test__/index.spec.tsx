@@ -1,7 +1,10 @@
-import { render } from '@utils/testing';
+import Home, { HomeProps } from '@pages/index';
+import { render, layoutMockSetup } from '@utils/testing';
 import React from 'react';
 
-import Home, { HomeProps } from '@pages/index';
+beforeAll(() => {
+  layoutMockSetup();
+});
 
 describe('Home', () => {
   let props: HomeProps;
@@ -13,6 +16,21 @@ describe('Home', () => {
             author: 'author',
             githubUrl: 'githuburl',
           },
+        },
+        allMarkdownRemark: {
+          edges: [
+            {
+              node: {
+                excerpt: 'excerpt',
+                id: 'id',
+                frontmatter: {
+                  date: '2020-07-12T00:00:00.000Z',
+                  title: 'title',
+                  path: '/path',
+                },
+              },
+            },
+          ],
         },
         allGithubData: {
           edges: [

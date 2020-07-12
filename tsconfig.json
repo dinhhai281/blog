@@ -9,12 +9,13 @@
     "paths": {
       "@utils/*": ["./utils/*"],
       "@components/*": ["./components/*"],
-      "@pages/*": ["./pages/*"]
+      "@pages/*": ["./pages/*"],
+      "@templates/*": ["./templates/*"]
     },
     "strict": true,
     "noEmit": true,
     "noUnusedLocals": false,
-    "types": ["jest"],
+    "types": ["jest", "node"],
     "typeRoots": [
       "./node_modules/@types",
       "./types"

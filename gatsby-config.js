@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: {
     author: 'Hai Nguyen',
     githubUrl: 'https://github.com/dinhhai281',
+    title: 'Onyxia',
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -17,7 +18,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'articles',
+        path: `${__dirname}/src/articles/`,
       },
     },
     {

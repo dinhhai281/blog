@@ -1,6 +1,6 @@
 ---
 path: "/hello-world"
-date: 2017-07-12T17:12:33.962Z
+date: 2020-07-06T00:00:00.000Z
 title: "My First Gatsby Post"
 ---
 

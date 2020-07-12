@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layout renders correctly 1`] = `
+exports[`BlogPost Component render correctly 1`] = `
 <DocumentFragment>
   <div
     class="container px-5 pt-8 mx-auto"
@@ -18,6 +18,16 @@ exports[`Layout renders correctly 1`] = `
         </a>
       </h1>
     </header>
+    <div>
+      <h1>
+        title
+      </h1>
+      <div>
+        <p>
+          Test Blog Post
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;

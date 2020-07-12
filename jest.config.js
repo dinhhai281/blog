@@ -8,6 +8,7 @@ module.exports = {
     '@utils/(.*)': '<rootDir>/src/utils/$1',
     '@components/(.*)': '<rootDir>/src/components/$1',
     '@pages/(.*)': '<rootDir>/src/pages/$1',
+    '@templates/(.*)': '<rootDir>/src/templates/$1',
   },
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],

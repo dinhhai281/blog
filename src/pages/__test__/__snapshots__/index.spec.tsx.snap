@@ -12,16 +12,13 @@ exports[`Home render correctly 1`] = `
         class="text-pink-700 text-4xl font-bold leading-10"
       >
         <a
-          href="/en/about/"
+          href="/en/"
         >
-          Onyxia
+          title
         </a>
       </h1>
-      <div>
-         
-      </div>
     </header>
-    <div
+    <section
       class="flex"
     >
       <div
@@ -50,7 +47,33 @@ exports[`Home render correctly 1`] = `
           headline_2
         </div>
       </div>
-    </div>
+    </section>
+    <section
+      class="flex mt-6 flex-col"
+    >
+      <div
+        class="mb-6"
+      >
+        <div
+          class="grid grid-cols-1 row-gap-1"
+        >
+          <a
+            class="text-pink-700 text-2xl font-semibold"
+            href="/en/path"
+          >
+            title
+          </a>
+          <div
+            class="text-sm text-pink-700 text-opacity-75"
+          >
+            July 12, 2020
+          </div>
+          <div>
+            excerpt
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </DocumentFragment>
 `;

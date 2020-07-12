@@ -1,5 +1,4 @@
 const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -9,17 +8,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     },
   });
 };
-
-// exports.onCreateNode = ({ node, getNode, actions: { createNodeField } }) => {
-//   if (node.internal.type === 'MarkdownRemark') {
-//     const slug = createFilePath({ node, getNode, basePath: 'pages' });
-//     createNodeField({
-//       node,
-//       name: 'slug',
-//       value: slug,
-//     });
-//   }
-// };
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const result = await graphql(`

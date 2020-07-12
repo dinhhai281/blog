@@ -12,14 +12,11 @@ exports[`About render correctly 1`] = `
         class="text-pink-700 text-4xl font-bold leading-10"
       >
         <a
-          href="/en/about/"
+          href="/en/"
         >
-          Onyxia
+          title
         </a>
       </h1>
-      <div>
-         
-      </div>
     </header>
     <div>
       About page

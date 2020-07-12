@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Layout from '@components/layout';
 import { graphql } from 'gatsby';
 
-interface BlogPostProps {
+export interface BlogPostProps {
   data: {
     markdownRemark: {
       html: string;
@@ -18,9 +18,7 @@ const BlogPost: FC<BlogPostProps> = ({ data }) => {
     <Layout>
       <div>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        ></div>
+        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
       </div>
     </Layout>
   );
