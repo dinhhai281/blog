@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="container px-5 pt-8 mx-auto"
+  >
+    <header
+      class="flex justify-between items-center mb-8"
+    >
+      <h1
+        class="text-pink-700 text-4xl font-bold leading-10"
+      >
+        <a
+          href="/en/"
+        >
+          title
+        </a>
+      </h1>
+    </header>
+    <section
+      class="flex"
+    >
+      <div
+        class="flex items-center pr-2"
+      >
+        <img
+          class="p-0 m-0 w-12 h-12 rounded-full cursor-pointer"
+          src="testurl"
+        />
+      </div>
+      <div
+        class="pl-2"
+      >
+        <div>
+          headline_1 
+          <a
+            class="underline text-pink-700"
+            href="githuburl"
+            rel="noreferrer"
+            target="_blank"
+          >
+            test
+          </a>
+        </div>
+        <div>
+          headline_2
+        </div>
+      </div>
+    </section>
+    <section
+      class="flex mt-6 flex-col"
+    >
+      <div
+        class="mb-6"
+      >
+        <div
+          class="grid grid-cols-1 row-gap-1"
+        >
+          <a
+            class="text-pink-700 text-2xl font-semibold"
+            href="/en/path"
+          >
+            title
+          </a>
+          <div
+            class="text-sm text-pink-700 text-opacity-75"
+          >
+            July 12, 2020
+          </div>
+          <div>
+            excerpt
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;

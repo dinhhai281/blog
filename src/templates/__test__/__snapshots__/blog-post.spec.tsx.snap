@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogPost Component render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="container px-5 pt-8 mx-auto"
+  >
+    <header
+      class="flex justify-between items-center mb-8"
+    >
+      <h1
+        class="text-pink-700 text-4xl font-bold leading-10"
+      >
+        <a
+          href="/en/"
+        >
+          title
+        </a>
+      </h1>
+    </header>
+    <div>
+      <h1>
+        title
+      </h1>
+      <div>
+        <p>
+          Test Blog Post
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

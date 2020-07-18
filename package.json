@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "personal-blog",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
@@ -11,15 +11,24 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest --silent",
+    "lint": "eslint --ext ts --ext tsx --ext  js --ext jsx"
   },
   "dependencies": {
     "autoprefixer": "^9.8.4",
     "cssnano": "^4.1.10",
+    "dayjs": "^1.8.29",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.23.10",
+    "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-postcss": "^2.3.6",
+    "gatsby-plugin-typescript": "^2.4.13",
     "gatsby-plugin-typography": "^2.5.6",
     "gatsby-source-filesystem": "^2.3.14",
+    "gatsby-source-github-api": "^0.2.1",
+    "gatsby-transformer-remark": "^2.8.23",
+    "postcss-import": "^12.0.1",
+    "ramda": "^0.27.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-typography": "^0.16.19",
@@ -28,8 +37,27 @@
     "typography-theme-noriega": "^0.16.19"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.10.4",
+    "@testing-library/react": "^10.4.3",
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.22",
+    "@types/ramda": "^0.27.11",
+    "@types/react-test-renderer": "^16.9.2",
     "@types/typography": "^0.16.3",
-    "prettier": "2.0.5"
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "babel-jest": "^26.1.0",
+    "babel-preset-gatsby": "^0.5.1",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.1.0",
+    "prettier": "2.0.5",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.9.6"
   },
   "repository": {
     "type": "git",
