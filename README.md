@@ -1,4 +1,5 @@
-![CI](https://github.com/dinhhai281/blog/workflows/CI/badge.svg)
+![Build](https://github.com/dinhhai281/blog/workflows/CI/badge.svg)
+![Deploy](https://github.com/dinhhai281/blog/workflows/Deploy/badge.svg)
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">

@@ -5,6 +5,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 module.exports = {
+  pathPrefix: '/blog',
   siteMetadata: {
     author: 'Hai Nguyen',
     githubUrl: 'https://github.com/dinhhai281',
