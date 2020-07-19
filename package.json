@@ -6,13 +6,15 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "build:prefix": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest --silent",
-    "lint": "eslint --ext ts --ext tsx --ext  js --ext jsx"
+    "lint": "eslint --ext ts --ext tsx --ext  js --ext jsx",
+    "deploy": "gh-pages -d public -r \"https://$DEPLOY_ACTOR:$DEPLOY_ACCESS_TOKEN@github.com/$DEPLOY_ACTOR/blog.git\" -u \"Hai Nguyen <$DEPLOY_EMAIL>\""
   },
   "dependencies": {
     "autoprefixer": "^9.8.4",
@@ -53,6 +55,7 @@
     "eslint-plugin-jest": "^23.18.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
+    "gh-pages": "^3.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.1.0",
     "prettier": "2.0.5",
