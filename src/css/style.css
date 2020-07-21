@@ -4,5 +4,17 @@ html {
   @apply bg-gray-100;
 }
 
+h4 {
+  @apply text-2xl;
+  @apply text-pink-700;
+  @apply font-medium;
+}
+
+ul > li {
+  list-style: disc;
+  @apply mx-8;
+  @apply my-4;
+}
+
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
