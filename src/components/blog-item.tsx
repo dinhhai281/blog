@@ -16,14 +16,18 @@ export interface BlogItemProps {
 }
 
 const BlogItem: FC<BlogItemProps> = ({ source: { frontmatter, excerpt } }) => {
-  const intl = useIntl();
+  const { locale, formatMessage } = useIntl();
   return (
-    <div className='grid grid-cols-1 row-gap-1'>
-      <Link className='text-pink-700 text-2xl font-semibold' to={`/${intl.locale}${frontmatter.path}`}>
+    <div className='grid grid-cols-1'>
+      <Link className='text-pink-700 text-2xl font-semibold' to={`/${locale}${frontmatter.path}`}>
         {frontmatter.title}
       </Link>
-      <div className='text-sm text-pink-700 text-opacity-75'>{dayjs(frontmatter.date).format('MMMM D, YYYY')}</div>
-      <div>{excerpt}</div>
+      <div className='text-sm text-pink-700 text-opacity-75'>
+        {dayjs(frontmatter.date)
+          .locale(locale)
+          .format(formatMessage({ id: 'date_format' }))}
+      </div>
+      <div className='pt-3'>{excerpt}</div>
     </div>
   );
 };

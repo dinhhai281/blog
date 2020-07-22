@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
 import Layout from '@components/layout';
 import { graphql } from 'gatsby';
+import Img, { FluidObject } from 'gatsby-image';
+import React, { FC } from 'react';
 
 export interface BlogPostProps {
   data: {
@@ -8,6 +9,11 @@ export interface BlogPostProps {
       html: string;
       frontmatter: {
         title: string;
+        featuredImage: {
+          childImageSharp: {
+            fluid: FluidObject;
+          };
+        };
       };
     };
   };
@@ -16,9 +22,13 @@ export interface BlogPostProps {
 const BlogPost: FC<BlogPostProps> = ({ data }) => {
   return (
     <Layout>
-      <div>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
+      <div className='pb-24'>
+        <header>
+          <h1 className='mb-12 text-5xl text-pink-700'>{data.markdownRemark.frontmatter.title}</h1>
+          <Img className='mb-8 mx-16' fluid={data.markdownRemark.frontmatter.featuredImage?.childImageSharp?.fluid} />
+        </header>
+
+        <main dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></main>
       </div>
     </Layout>
   );
@@ -33,6 +43,13 @@ export const query = graphql`
       frontmatter {
         title
         path
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 1080) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

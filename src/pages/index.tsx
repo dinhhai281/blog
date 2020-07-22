@@ -64,7 +64,7 @@ const Home: FC<HomeProps> = ({ data }) => {
             onClick={handleAvatarClick}
           />
         </div>
-        <div className='pl-2'>
+        <div className='pl-2 grid grid-cols-1 grid-rows-2'>
           <div>
             {formatMessage({ id: 'headline_1' })}
             &nbsp;
@@ -80,7 +80,7 @@ const Home: FC<HomeProps> = ({ data }) => {
           <div>{formatMessage({ id: 'headline_2' })}</div>
         </div>
       </section>
-      <section className='flex mt-6 flex-col'>
+      <section className='grid grid-cols-1 mt-6'>
         {data.allMarkdownRemark.edges
           .sort((a, b) =>
             [a.node.frontmatter.date, b.node.frontmatter.date].map(Date.parse).reduce((acc, cur) => cur - acc)

@@ -15,6 +15,17 @@ describe('BlogPost Component', () => {
         markdownRemark: {
           frontmatter: {
             title: 'title',
+            featuredImage: {
+              childImageSharp: {
+                fluid: {
+                  src: 'src',
+                  aspectRatio: 16 / 9,
+                  sizes: 'sizes',
+                  srcSet: 'srcSet',
+                  base64: undefined,
+                },
+              },
+            },
           },
           html: '<p>Test Blog Post</p>',
         },
