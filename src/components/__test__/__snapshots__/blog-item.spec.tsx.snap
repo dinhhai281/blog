@@ -3,7 +3,7 @@
 exports[`BlogItem Component render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="grid grid-cols-1 row-gap-1"
+    class="grid grid-cols-1"
   >
     <a
       class="text-pink-700 text-2xl font-semibold"
@@ -16,7 +16,9 @@ exports[`BlogItem Component render correctly 1`] = `
     >
       0amte_for0amt
     </div>
-    <div>
+    <div
+      class="pt-3"
+    >
       excerpt
     </div>
   </div>

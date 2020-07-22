@@ -3,7 +3,7 @@
 exports[`About render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="container px-5 pt-12 mx-auto"
+    class="container pt-12 mx-auto px-8 md:px-16 lg:px-32"
   >
     <header
       class="flex justify-between items-center mb-12"
@@ -18,9 +18,11 @@ exports[`About render correctly 1`] = `
         </a>
       </h1>
     </header>
-    <div>
-      About page
-    </div>
+    <main>
+      <div>
+        About page
+      </div>
+    </main>
   </div>
 </DocumentFragment>
 `;

@@ -18,7 +18,7 @@ export interface BlogItemProps {
 const BlogItem: FC<BlogItemProps> = ({ source: { frontmatter, excerpt } }) => {
   const { locale, formatMessage } = useIntl();
   return (
-    <div className='grid grid-cols-1 row-gap-1'>
+    <div className='grid grid-cols-1'>
       <Link className='text-pink-700 text-2xl font-semibold' to={`/${locale}${frontmatter.path}`}>
         {frontmatter.title}
       </Link>
@@ -27,7 +27,7 @@ const BlogItem: FC<BlogItemProps> = ({ source: { frontmatter, excerpt } }) => {
           .locale(locale)
           .format(formatMessage({ id: 'date_format' }))}
       </div>
-      <div>{excerpt}</div>
+      <div className='pt-3'>{excerpt}</div>
     </div>
   );
 };

@@ -24,13 +24,13 @@ const Layout: FC = ({ children }) => {
   );
 
   return (
-    <div className='container px-5 pt-12 mx-auto'>
+    <div className='container pt-12 mx-auto px-8 md:px-16 lg:px-32'>
       <header className='flex justify-between items-center mb-12'>
         <h1 className='text-pink-700 text-6xl font-bold leading-10'>
           <Link to='/'>{data.site.siteMetadata.title}</Link>
         </h1>
       </header>
-      {children}
+      <main>{children}</main>
     </div>
   );
 };

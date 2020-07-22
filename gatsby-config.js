@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     author: 'Hai Nguyen',
     githubUrl: 'https://github.com/dinhhai281',
-    title: 'Onyxia',
+    title: 'Góc Sáng',
   },
   plugins: [
     'gatsby-plugin-typescript',
