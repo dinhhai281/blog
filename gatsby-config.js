@@ -10,12 +10,17 @@ module.exports = {
     author: 'Hai Nguyen',
     githubUrl: 'https://github.com/dinhhai281',
     title: 'Góc Sáng',
+    siteUrl: 'https://dinhhai281.github.com/blog',
+    description: 'Personal blog by Hai Nguyen',
+    keywords: ['Blog', 'React', 'Angular', 'Javascript', 'Typescript', 'Functional Programming'],
   },
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-transformer-remark`,
       options: {

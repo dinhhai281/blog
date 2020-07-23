@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { changeLocale, useIntl } from 'gatsby-plugin-intl';
 import React, { FC, useEffect, useCallback } from 'react';
 import BlogItem from '@components/blog-item';
+import SEO from '@components/seo';
 
 export interface HomeProps {
   data: {
@@ -56,6 +57,7 @@ const Home: FC<HomeProps> = ({ data }) => {
 
   return (
     <Layout>
+      <SEO />
       <section className='flex'>
         <div className='flex items-center pr-2'>
           <img
