@@ -2,6 +2,7 @@ import Layout from '@components/layout';
 import { graphql } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 import React, { FC } from 'react';
+import SEO from '@components/seo';
 
 export interface BlogPostProps {
   data: {
@@ -22,6 +23,7 @@ export interface BlogPostProps {
 const BlogPost: FC<BlogPostProps> = ({ data }) => {
   return (
     <Layout>
+      <SEO title={data.markdownRemark.frontmatter.title} />
       <div className='pb-24'>
         <header>
           <h1 className='mb-12 text-5xl text-pink-700'>{data.markdownRemark.frontmatter.title}</h1>
