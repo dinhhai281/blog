@@ -13,3 +13,8 @@ ul > li {
   @apply mx-8;
   @apply my-4;
 }
+
+code.language-text {
+  padding-left: .5rem !important;
+  padding-right: .5rem !important;
+}
