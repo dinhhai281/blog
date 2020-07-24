@@ -5,7 +5,7 @@ html {
 h4 {
   @apply text-2xl;
   @apply text-pink-700;
-  @apply font-medium;
+  @apply font-normal;
 }
 
 ul > li {

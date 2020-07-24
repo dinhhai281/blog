@@ -6,7 +6,7 @@ exports[`BlogItem Component render correctly 1`] = `
     class="grid grid-cols-1"
   >
     <a
-      class="text-pink-700 text-2xl font-semibold"
+      class="text-pink-700 text-xl md:text-2xl font-semibold"
       href="/en/path"
     >
       title

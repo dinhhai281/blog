@@ -26,8 +26,10 @@ const BlogPost: FC<BlogPostProps> = ({ data }) => {
       <SEO title={data.markdownRemark.frontmatter.title} />
       <div className='pb-24'>
         <header>
-          <h1 className='mb-12 text-5xl text-pink-700'>{data.markdownRemark.frontmatter.title}</h1>
-          <Img className='mb-8 mx-16' fluid={data.markdownRemark.frontmatter.featuredImage?.childImageSharp?.fluid} />
+          <h1 className='mb-12 text-2xl md:text-3xl lg:text-4xl text-pink-700 font-semibold'>
+            {data.markdownRemark.frontmatter.title}
+          </h1>
+          <Img className='mb-8 mx-1 ' fluid={data.markdownRemark.frontmatter.featuredImage?.childImageSharp?.fluid} />
         </header>
 
         <main dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></main>
