@@ -9,7 +9,7 @@ exports[`Layout renders correctly 1`] = `
       class="flex justify-between items-center mb-12"
     >
       <h1
-        class="text-pink-700 text-6xl font-bold leading-10"
+        class="text-pink-700 text-5xl font-bold leading-10"
       >
         <a
           href="/en/"
