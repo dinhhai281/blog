@@ -61,13 +61,14 @@ const Home: FC<HomeProps> = ({ data }) => {
       <section className='flex'>
         <div className='flex items-center pr-2'>
           <img
-            className='p-0 m-0 w-12 h-12 rounded-full cursor-pointer'
+            className='p-0 m-0 w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer'
             src={data.allGithubData.edges[0].node.data.viewer.avatarUrl}
             onClick={handleAvatarClick}
+            alt='avatar'
           />
         </div>
         <div className='pl-2 grid grid-cols-1 grid-rows-2'>
-          <div>
+          <span className='text-xs md:text-sm'>
             {formatMessage({ id: 'headline_1' })}
             &nbsp;
             <a
@@ -78,8 +79,8 @@ const Home: FC<HomeProps> = ({ data }) => {
             >
               {data.allGithubData.edges[0].node.data.viewer.name}
             </a>
-          </div>
-          <div>{formatMessage({ id: 'headline_2' })}</div>
+          </span>
+          <span className='text-xs md:text-sm'>{formatMessage({ id: 'headline_2' })}</span>
         </div>
       </section>
       <section className='grid grid-cols-1 mt-6'>

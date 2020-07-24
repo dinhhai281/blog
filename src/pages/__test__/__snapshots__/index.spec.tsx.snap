@@ -3,13 +3,13 @@
 exports[`Home render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="container pt-12 mx-auto px-8 md:px-16 lg:px-32"
+    class="container pt-6 md:pt-10 lg:pt-12 px-8 md:px-16 lg:px-32 mx-auto"
   >
     <header
-      class="flex justify-between items-center mb-12"
+      class="flex justify-between items-center mb-6 md:mb-10 lg:mb-12"
     >
       <h1
-        class="text-pink-700 text-5xl font-bold leading-10"
+        class="text-pink-700 text-3xl md:text-4xl lg:text-5xl font-bold leading-10"
       >
         <a
           href="/en/"
@@ -26,14 +26,17 @@ exports[`Home render correctly 1`] = `
           class="flex items-center pr-2"
         >
           <img
-            class="p-0 m-0 w-12 h-12 rounded-full cursor-pointer"
+            alt="avatar"
+            class="p-0 m-0 w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer"
             src="testurl"
           />
         </div>
         <div
           class="pl-2 grid grid-cols-1 grid-rows-2"
         >
-          <div>
+          <span
+            class="text-xs md:text-sm"
+          >
             headline_1 
             <a
               class="underline text-pink-700"
@@ -43,10 +46,12 @@ exports[`Home render correctly 1`] = `
             >
               test
             </a>
-          </div>
-          <div>
+          </span>
+          <span
+            class="text-xs md:text-sm"
+          >
             headline_2
-          </div>
+          </span>
         </div>
       </section>
       <section
@@ -59,7 +64,7 @@ exports[`Home render correctly 1`] = `
             class="grid grid-cols-1"
           >
             <a
-              class="text-pink-700 text-2xl font-semibold"
+              class="text-pink-700 text-xl md:text-2xl font-semibold"
               href="/en/path"
             >
               title
