@@ -361,4 +361,4 @@ module.exports = {
 };
 ```
 
-#### Lúc làm thì mò lâu lắm, viết lại có thể sẽ có chút sai sót bữa nào rãnh sẽ test lại cái bài viết này 😵
+#### Lúc làm thì mò lâu lắm, viết lại có thể sẽ có chút sai sót bữa nào rảnh sẽ test lại cái bài viết này 😵
