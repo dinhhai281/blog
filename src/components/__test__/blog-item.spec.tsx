@@ -1,6 +1,6 @@
-import React from 'react';
 import BlogItem, { BlogItemProps } from '@components/blog-item';
 import { render } from '@utils/testing';
+import React from 'react';
 
 describe('BlogItem Component', () => {
   let props: BlogItemProps;
@@ -23,5 +23,12 @@ describe('BlogItem Component', () => {
     const { asFragment } = render(<BlogItem source={props.source} />);
 
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('link to post', () => {
+    const { getByTestId } = render(<BlogItem source={props.source} />);
+    const element = getByTestId('title');
+
+    expect(element.getAttribute('href')).toEqual(`/en${props.source.frontmatter.path}`);
   });
 });

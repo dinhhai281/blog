@@ -19,7 +19,11 @@ const BlogItem: FC<BlogItemProps> = ({ source: { frontmatter, excerpt } }) => {
   const { locale, formatMessage } = useIntl();
   return (
     <div className='grid grid-cols-1'>
-      <Link className='text-pink-700 text-xl md:text-2xl font-semibold' to={`/${locale}${frontmatter.path}`}>
+      <Link
+        data-testid='title'
+        className='text-pink-700 text-xl md:text-2xl font-semibold'
+        to={`/${locale}${frontmatter.path}`}
+      >
         {frontmatter.title}
       </Link>
       <div className='text-sm text-pink-700 text-opacity-75'>

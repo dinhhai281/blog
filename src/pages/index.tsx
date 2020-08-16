@@ -89,7 +89,7 @@ const Home: FC<HomeProps> = ({ data }) => {
             [a.node.frontmatter.date, b.node.frontmatter.date].map(Date.parse).reduce((acc, cur) => cur - acc)
           )
           .map(({ node }) => (
-            <div key={node.id} className='mb-6'>
+            <div key={node.id} className='mb-6' data-testid='post'>
               <BlogItem source={node} />
             </div>
           ))}
