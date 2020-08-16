@@ -10,7 +10,8 @@
       "@utils/*": ["./utils/*"],
       "@components/*": ["./components/*"],
       "@pages/*": ["./pages/*"],
-      "@templates/*": ["./templates/*"]
+      "@templates/*": ["./templates/*"],
+      "@models": ["./models"]
     },
     "strict": true,
     "noEmit": true,

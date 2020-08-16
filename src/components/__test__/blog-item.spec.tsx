@@ -1,6 +1,10 @@
 import BlogItem, { BlogItemProps } from '@components/blog-item';
-import { render } from '@utils/testing';
+import { render, layoutMockSetup } from '@utils/testing';
 import React from 'react';
+
+beforeAll(() => {
+  layoutMockSetup();
+});
 
 describe('BlogItem Component', () => {
   let props: BlogItemProps;
@@ -13,6 +17,7 @@ describe('BlogItem Component', () => {
           date: '2020-07-12T00:00:00.000Z',
           title: 'title',
           path: '/path',
+          tags: 'JAVASCRIPT',
         },
         excerpt: 'excerpt',
       },

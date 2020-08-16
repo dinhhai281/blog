@@ -75,12 +75,25 @@ exports[`Home render correctly 1`] = `
               title 2
             </a>
             <div
-              class="text-sm text-pink-700 text-opacity-75"
+              class="flex flex-col text-sm text-pink-700 text-opacity-75"
             >
-              0amte_for0amt
+              <div
+                class="mb-2 sm:mb-0 mr-3"
+              >
+                0amte_for0amt
+              </div>
+              <div
+                class="flex flex-row flex-wrap"
+              >
+                <div
+                  class="tag tag-ts"
+                >
+                  JAVASCRIPT
+                </div>
+              </div>
             </div>
             <div
-              class="pt-3"
+              class="pt-1"
             >
               excerpt 2
             </div>
@@ -101,12 +114,25 @@ exports[`Home render correctly 1`] = `
               title 1
             </a>
             <div
-              class="text-sm text-pink-700 text-opacity-75"
+              class="flex flex-col text-sm text-pink-700 text-opacity-75"
             >
-              6amte_for0amt
+              <div
+                class="mb-2 sm:mb-0 mr-3"
+              >
+                6amte_for0amt
+              </div>
+              <div
+                class="flex flex-row flex-wrap"
+              >
+                <div
+                  class="tag tag-ts"
+                >
+                  JAVASCRIPT
+                </div>
+              </div>
             </div>
             <div
-              class="pt-3"
+              class="pt-1"
             >
               excerpt 1
             </div>

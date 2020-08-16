@@ -15,6 +15,7 @@ beforeEach(() => {
         siteMetadata: {
           author: 'author',
           githubUrl: 'githuburl',
+          tags: [],
         },
       },
       allMarkdownRemark: {
@@ -27,6 +28,7 @@ beforeEach(() => {
                 date: '2020-07-11T00:00:00.000Z',
                 title: 'title 1',
                 path: '/path1',
+                tags: 'JAVASCRIPT',
               },
             },
           },
@@ -38,6 +40,7 @@ beforeEach(() => {
                 date: '2020-07-12T00:00:00.000Z',
                 title: 'title 2',
                 path: '/path2',
+                tags: 'JAVASCRIPT',
               },
             },
           },

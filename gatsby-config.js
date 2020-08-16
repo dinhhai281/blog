@@ -13,6 +13,18 @@ module.exports = {
     siteUrl: 'https://dinhhai281.github.com/blog',
     description: 'Personal blog by Hai Nguyen',
     keywords: ['Blog', 'React', 'Angular', 'Javascript', 'Typescript', 'Functional Programming'],
+    tags: [
+      { key: 'TYPESCRIPT', className: 'tag-ts' },
+      { key: 'JAVASCRIPT', className: 'tag-js' },
+      { key: 'CSS', className: 'tag-css' },
+      { key: 'REACT', className: 'tag-react' },
+      { key: 'ANGULAR', className: 'tag-angular' },
+      { key: 'RXJS', className: 'tag-rxjs' },
+      { key: 'RUST', className: 'tag-rust' },
+      { key: 'NODEJS', className: 'tag-nodejs' },
+      { key: 'GRAPHQL', className: 'tag-graphql' },
+      { key: 'FP', className: 'tag-fp' },
+    ],
   },
   plugins: [
     'gatsby-plugin-typescript',

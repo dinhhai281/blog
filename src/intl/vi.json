@@ -1,5 +1,16 @@
 {
   "date_format": "D MMMM, YYYY",
   "headline_1": "Blog cá nhân của ",
-  "headline_2": "Làm bằng ❤️ không phải Code"
+  "headline_2": "Làm bằng ❤️ không phải Code",
+  "TYPESCRIPT": "TypeScript",
+  "JAVASCRIPT": "JavaScript",
+  "CSS": "CSS",
+  "REACT": "React",
+  "ANGULAR": "Angular",
+  "RXJS": "RxJS",
+  "RUST": "Rust",
+  "NODEJS": "Node.js",
+  "ELSE": "Something else",
+  "GRAPHQL": "GraphQL",
+  "FP": "Functional Programming"
 }
