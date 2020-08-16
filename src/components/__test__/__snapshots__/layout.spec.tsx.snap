@@ -13,12 +13,15 @@ exports[`Layout renders correctly 1`] = `
       >
         <a
           href="/en/"
+          role="link"
         >
           title
         </a>
       </h1>
     </header>
-    <main />
+    <main
+      role="main"
+    />
   </div>
 </DocumentFragment>
 `;

@@ -37,4 +37,27 @@ describe('BlogPost Component', () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('render title correctly', () => {
+    const { getByTestId } = render(<BlogPost data={props.data} />);
+    const element = getByTestId('title');
+
+    expect(element.innerHTML).toEqual(props.data.markdownRemark.frontmatter.title);
+  });
+
+  it('render image correctly', () => {
+    const { getByAltText } = render(<BlogPost data={props.data} />);
+    const element = getByAltText('featured-img');
+
+    expect(element.getAttribute('src')).toEqual(
+      props.data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid.src
+    );
+  });
+
+  it('render post content correctly', () => {
+    const { getByTestId } = render(<BlogPost data={props.data} />);
+    const element = getByTestId('post-content');
+
+    expect(element.innerHTML).toEqual(props.data.markdownRemark.html);
+  });
 });

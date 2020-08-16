@@ -12,6 +12,11 @@ module.exports = {
   },
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!<rootDir>/src/utils/testing/**/*.{ts,tsx,js,jsx}',
+    '!<rootDir>/src/utils/typography.ts',
+  ],
   globals: {
     __PATH_PREFIX__: ``,
     __BASE_PATH__: ``,
