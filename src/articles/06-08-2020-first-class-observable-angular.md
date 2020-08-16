@@ -2,6 +2,7 @@
 path: "/first-class-observable-angular"
 date: "2020-08-06"
 title: "Một chút ngẫu hứng với Angular - First Class Observable Pattern"
+tags: "TYPESCRIPT,RXJS,ANGULAR"
 featuredImage: ../images/first-class-observable-angular/rxjs-featured.png
 ---
 

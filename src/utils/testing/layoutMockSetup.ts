@@ -10,6 +10,7 @@ export const layoutMockSetup = () => {
         siteUrl: 'siteUrl',
         description: 'description',
         keywords: ['key 1', 'key 2'],
+        tags: [{ key: 'JAVASCRIPT', className: 'tag-ts' }],
       },
     },
   }));

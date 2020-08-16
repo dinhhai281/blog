@@ -1,0 +1,74 @@
+
+
+.tag {
+  @apply px-2;
+  @apply py-1;
+  @apply mr-1;
+  @apply mb-1;
+  @apply bg-purple-300;
+  @apply rounded-md;
+  @apply text-xs;
+  @apply font-medium;
+
+  --ts-background-color: #007ACC;
+  --js-background-color: #F7DF1E;
+  --css-background-color: #1572B6;
+  --react-background-color: #61DAFB;
+  --angular-background-color: #DD0031;
+  --rxjs-background-color: #d81b60;
+  --rust-background-color: #000000;
+  --nodejs-background-color: #339933;
+  --graphql-background-color: #E10098;
+  --fb-background-color: #5D4F85;
+
+}
+
+.tag-ts {
+  background-color: var(--ts-background-color);
+  @apply text-white;
+}
+
+.tag-js {
+  background-color: var(--js-background-color);
+  @apply text-black;
+}
+
+.tag-css {
+  background-color: var(--css-background-color);
+  @apply text-white;
+}
+
+.tag-react {
+  background-color: var(--react-background-color);
+  @apply text-black;
+}
+
+.tag-angular {
+  background-color: var(--angular-background-color);
+  @apply text-white;
+}
+
+.tag-rxjs {
+  background-color: var(--rxjs-background-color);
+  @apply text-white;
+}
+
+.tag-rust {
+  background-color: var(--rust-background-color);
+  @apply text-white;
+}
+
+.tag-nodejs {
+  background-color: var(--nodejs-background-color);
+  @apply text-white;
+}
+
+.tag-graphql {
+  background-color: var(--graphql-background-color);
+  @apply text-white;
+}
+
+.tag-fp {
+  background-color: var(--fb-background-color);
+  @apply text-white;
+}

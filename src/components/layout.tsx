@@ -11,7 +11,7 @@ interface LayoutData {
 }
 
 const Layout: FC = ({ children }) => {
-  const data: LayoutData = useStaticQuery(
+  const data = useStaticQuery<LayoutData>(
     graphql`
       query {
         site {

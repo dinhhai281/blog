@@ -4,6 +4,7 @@ import { changeLocale, useIntl } from 'gatsby-plugin-intl';
 import React, { FC, useEffect, useCallback } from 'react';
 import BlogItem from '@components/blog-item';
 import SEO from '@components/seo';
+import { Tag } from '@models';
 
 export interface HomeProps {
   data: {
@@ -11,6 +12,7 @@ export interface HomeProps {
       siteMetadata: {
         author: string;
         githubUrl: string;
+        tags: Tag[];
       };
     };
     allMarkdownRemark: {
@@ -22,6 +24,7 @@ export interface HomeProps {
             date: string;
             path: string;
             title: string;
+            tags: string;
           };
         };
       }[];
@@ -121,6 +124,10 @@ export const query = graphql`
       siteMetadata {
         author
         githubUrl
+        tags {
+          key
+          className
+        }
       }
     }
 
@@ -132,6 +139,7 @@ export const query = graphql`
             date
             path
             title
+            tags
           }
           excerpt
         }

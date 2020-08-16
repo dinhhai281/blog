@@ -16,6 +16,7 @@ module.exports = {
     'src/**/*.{js,jsx,ts,tsx}',
     '!<rootDir>/src/utils/testing/**/*.{ts,tsx,js,jsx}',
     '!<rootDir>/src/utils/typography.ts',
+    '!<rootDir>/src/models/*',
   ],
   globals: {
     __PATH_PREFIX__: ``,
