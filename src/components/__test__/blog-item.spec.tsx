@@ -11,29 +11,32 @@ describe('BlogItem Component', () => {
 
   beforeEach(() => {
     props = {
-      source: {
-        id: 'id',
-        frontmatter: {
-          date: '2020-07-12T00:00:00.000Z',
-          title: 'title',
-          path: '/path',
-          tags: 'JAVASCRIPT',
-        },
-        excerpt: 'excerpt',
+      frontmatter: {
+        date: '2020-07-12T00:00:00.000Z',
+        title: 'title',
+        path: '/path',
+        tags: 'JAVASCRIPT',
       },
+      excerpt: 'excerpt',
+      tags: [
+        {
+          key: 'JAVASCRIPT',
+          className: 'tag-js',
+        },
+      ],
     };
   });
 
   it('render correctly', () => {
-    const { asFragment } = render(<BlogItem source={props.source} />);
+    const { asFragment } = render(<BlogItem {...props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('link to post', () => {
-    const { getByTestId } = render(<BlogItem source={props.source} />);
+    const { getByTestId } = render(<BlogItem {...props} />);
     const element = getByTestId('title');
 
-    expect(element.getAttribute('href')).toEqual(`/en${props.source.frontmatter.path}`);
+    expect(element.getAttribute('href')).toEqual(`/en${props.frontmatter.path}`);
   });
 });

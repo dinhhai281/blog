@@ -1,50 +1,17 @@
+import { Frontmatter, Tag } from '@models';
 import dayjs from 'dayjs';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import { useIntl } from 'gatsby-plugin-intl';
-import React, { FC, useCallback } from 'react';
-import { Tag } from '@models';
+import React, { FC } from 'react';
 
 export interface BlogItemProps {
-  source: {
-    id: string;
-    frontmatter: {
-      date: string;
-      path: string;
-      title: string;
-      tags: string;
-    };
-    excerpt: string;
-  };
+  frontmatter: Frontmatter;
+  excerpt: string;
+  tags: Tag[];
 }
 
-export interface BlogItemData {
-  site: {
-    siteMetadata: {
-      tags: Tag[];
-    };
-  };
-}
-
-const BlogItem: FC<BlogItemProps> = ({ source: { frontmatter, excerpt } }) => {
+const BlogItem: FC<BlogItemProps> = ({ frontmatter, excerpt, tags }) => {
   const { locale, formatMessage } = useIntl();
-  const data = useStaticQuery<BlogItemData>(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            tags {
-              key
-              className
-            }
-          }
-        }
-      }
-    `
-  );
-  const getTags = useCallback(
-    (data: BlogItemData) => data.site.siteMetadata.tags.filter(tag => frontmatter.tags.split(',').includes(tag.key)),
-    [data]
-  );
 
   return (
     <div className='grid grid-cols-1'>
@@ -62,7 +29,7 @@ const BlogItem: FC<BlogItemProps> = ({ source: { frontmatter, excerpt } }) => {
             .format(formatMessage({ id: 'date_format' }))}
         </div>
         <div className='flex flex-row flex-wrap'>
-          {getTags(data).map(tag => (
+          {tags.map(tag => (
             <div key={tag.key} className={`tag ${tag.className}`}>
               {formatMessage({ id: tag.key })}
             </div>

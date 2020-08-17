@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby-plugin-intl';
 import { useStaticQuery, graphql } from 'gatsby';
+import { SiteMetadata } from '@models';
 
 interface LayoutData {
   site: {
-    siteMetadata: {
-      title: string;
-    };
+    siteMetadata: SiteMetadata;
   };
 }
 
@@ -15,9 +14,7 @@ const Layout: FC = ({ children }) => {
     graphql`
       query {
         site {
-          siteMetadata {
-            title
-          }
+          ...SiteMetadata
         }
       }
     `

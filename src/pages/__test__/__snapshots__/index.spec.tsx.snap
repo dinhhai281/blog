@@ -84,13 +84,7 @@ exports[`Home render correctly 1`] = `
               </div>
               <div
                 class="flex flex-row flex-wrap"
-              >
-                <div
-                  class="tag tag-ts"
-                >
-                  JAVASCRIPT
-                </div>
-              </div>
+              />
             </div>
             <div
               class="pt-1"
@@ -123,13 +117,7 @@ exports[`Home render correctly 1`] = `
               </div>
               <div
                 class="flex flex-row flex-wrap"
-              >
-                <div
-                  class="tag tag-ts"
-                >
-                  JAVASCRIPT
-                </div>
-              </div>
+              />
             </div>
             <div
               class="pt-1"

@@ -24,7 +24,7 @@ exports[`BlogItem Component render correctly 1`] = `
         class="flex flex-row flex-wrap"
       >
         <div
-          class="tag tag-ts"
+          class="tag tag-js"
         >
           JAVASCRIPT
         </div>

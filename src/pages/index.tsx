@@ -1,44 +1,28 @@
+import BlogItem from '@components/blog-item';
 import Layout from '@components/layout';
+import SEO from '@components/seo';
+import { Frontmatter, GithubData, SiteMetadata } from '@models';
 import { graphql } from 'gatsby';
 import { changeLocale, useIntl } from 'gatsby-plugin-intl';
-import React, { FC, useEffect, useCallback } from 'react';
-import BlogItem from '@components/blog-item';
-import SEO from '@components/seo';
-import { Tag } from '@models';
+import React, { FC, useCallback, useEffect } from 'react';
 
 export interface HomeProps {
   data: {
     site: {
-      siteMetadata: {
-        author: string;
-        githubUrl: string;
-        tags: Tag[];
-      };
+      siteMetadata: SiteMetadata;
     };
     allMarkdownRemark: {
       edges: {
         node: {
           id: string;
           excerpt: string;
-          frontmatter: {
-            date: string;
-            path: string;
-            title: string;
-            tags: string;
-          };
+          frontmatter: Frontmatter;
         };
       }[];
     };
     allGithubData: {
       edges: {
-        node: {
-          data: {
-            viewer: {
-              name: string;
-              avatarUrl: string;
-            };
-          };
-        };
+        node: GithubData;
       }[];
     };
   };
@@ -57,6 +41,12 @@ const Home: FC<HomeProps> = ({ data }) => {
   const handleAvatarClick = useCallback(() => {
     window.open(data.site.siteMetadata.githubUrl, '_blank');
   }, []);
+
+  const getBlogTags = useCallback(
+    (frontmatter: Frontmatter) =>
+      data.site.siteMetadata.tags.filter(tag => frontmatter.tags.split(',').includes(tag.key)),
+    [data]
+  );
 
   return (
     <Layout>
@@ -91,9 +81,9 @@ const Home: FC<HomeProps> = ({ data }) => {
           .sort((a, b) =>
             [a.node.frontmatter.date, b.node.frontmatter.date].map(Date.parse).reduce((acc, cur) => cur - acc)
           )
-          .map(({ node }) => (
-            <div key={node.id} className='mb-6' data-testid='post'>
-              <BlogItem source={node} />
+          .map(({ node: { id, ...rest } }) => (
+            <div key={id} className='mb-6' data-testid='post'>
+              <BlogItem {...rest} tags={getBlogTags(rest.frontmatter)} />
             </div>
           ))}
       </section>
@@ -108,40 +98,21 @@ export const query = graphql`
     allGithubData {
       edges {
         node {
-          data {
-            viewer {
-              avatarUrl
-              email
-              login
-              name
-            }
-          }
+          ...GithubData
         }
       }
     }
 
     site {
-      siteMetadata {
-        author
-        githubUrl
-        tags {
-          key
-          className
-        }
-      }
+      ...SiteMetadata
     }
 
     allMarkdownRemark(filter: {}) {
       edges {
         node {
           id
-          frontmatter {
-            date
-            path
-            title
-            tags
-          }
           excerpt
+          ...MarkdownFrontmatter
         }
       }
     }
