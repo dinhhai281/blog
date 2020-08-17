@@ -16,6 +16,10 @@ beforeEach(() => {
           author: 'author',
           githubUrl: 'githuburl',
           tags: [],
+          description: 'description',
+          keywords: ['keyword'],
+          siteUrl: 'siteUrl',
+          title: 'title',
         },
       },
       allMarkdownRemark: {
@@ -54,6 +58,8 @@ beforeEach(() => {
                 viewer: {
                   name: 'test',
                   avatarUrl: 'testurl',
+                  email: 'email',
+                  login: 'login',
                 },
               },
             },
