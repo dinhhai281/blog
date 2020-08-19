@@ -1,0 +1,103 @@
+@keyframes toggle-btn-change-color {
+  to {
+    @apply bg-pink-700;
+  }
+}
+
+@keyframes side-bar-open {
+  from {
+    width: 0px;
+  }
+
+  to {
+    width: 240px;
+  }
+}
+
+@keyframes side-bar-close {
+  from {
+    width: 240px;
+  }
+
+  to {
+    width: 0px;
+  }
+}
+
+@keyframes drawer-open {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes drawer-close {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.side-bar {
+  @apply flex;
+  @apply flex-col;
+  @apply relative;
+  @apply h-screen;
+
+  width:240px;
+}
+
+.side-bar.side-bar--opened {
+  animation: side-bar-open .35s ease-in-out forwards;
+}
+
+.side-bar.side-bar--closed {
+  animation: side-bar-close .35s ease-in-out forwards;
+}
+
+.side-bar .drawer {
+  @apply fixed;
+  @apply h-screen;
+
+  left: 0;
+  top: 0;
+  width: 240px;
+}
+
+.side-bar.side-bar--opened .drawer {
+  animation: drawer-open .35s ease-in-out forwards;
+}
+
+.side-bar.side-bar--closed .drawer {
+  animation: drawer-close .35s ease-in-out forwards;
+}
+
+
+.side-bar .toggle-btn {
+  @apply absolute;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply bg-pink-200;
+  @apply cursor-pointer;
+  @apply text-white;
+
+  width: 40px;
+  height: 40px;
+  right: -40px;
+  top: 0;
+}
+
+.side-bar .toggle-btn:hover svg {
+  animation: toggle-btn-zoom .15s ease-in-out forwards;
+}
+
+.side-bar .toggle-btn:hover {
+  animation: toggle-btn-change-color .15s ease-in-out forwards;
+}

@@ -3,25 +3,45 @@
 exports[`Layout renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="container pt-6 md:pt-10 lg:pt-12 px-8 md:px-16 lg:px-32 mx-auto"
+    class="flex"
   >
-    <header
-      class="flex justify-between items-center mb-6 md:mb-10 lg:mb-12"
+    <aside
+      class="side-bar side-bar--opened"
     >
-      <h1
-        class="text-pink-700 text-3xl md:text-4xl lg:text-5xl font-bold leading-10"
+      <div
+        class="drawer"
       >
-        <a
-          href="/en/"
-          role="link"
+        <div
+          class="toggle-btn"
         >
-          title
-        </a>
-      </h1>
-    </header>
-    <main
-      role="main"
-    />
+          <test-file-stub />
+        </div>
+        <div>
+          Side Nav
+        </div>
+      </div>
+    </aside>
+    <div
+      class="container pt-6 md:pt-10 lg:pt-12 px-8 md:px-16 lg:px-32"
+    >
+      <header
+        class="flex justify-between items-center mb-6 md:mb-10 lg:mb-12"
+      >
+        <h1
+          class="text-pink-700 text-3xl md:text-4xl lg:text-5xl font-bold leading-10"
+        >
+          <a
+            href="/en/"
+            role="link"
+          >
+            title
+          </a>
+        </h1>
+      </header>
+      <main
+        role="main"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

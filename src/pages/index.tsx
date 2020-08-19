@@ -28,10 +28,6 @@ export interface HomeProps {
   };
 }
 
-type SiteData = Pick<HomeProps['data'], 'site'>['site'];
-type AllMarkdownRemark = Pick<HomeProps['data'], 'allMarkdownRemark'>['allMarkdownRemark'];
-type AllGithubData = Pick<HomeProps['data'], 'allGithubData'>['allGithubData'];
-
 const Home: FC<HomeProps> = ({ data }) => {
   const { formatMessage, locale } = useIntl();
   useEffect(() => {
