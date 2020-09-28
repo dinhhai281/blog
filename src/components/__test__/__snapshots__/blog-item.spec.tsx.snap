@@ -16,7 +16,7 @@ exports[`BlogItem Component render correctly 1`] = `
       class="flex flex-col text-sm text-pink-700 text-opacity-75"
     >
       <div
-        class="mb-2 sm:mb-0 mr-3"
+        class="mb-2 sm:mb-1 mr-3"
       >
         0amte_for0amt
       </div>
