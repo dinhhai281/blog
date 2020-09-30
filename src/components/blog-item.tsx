@@ -23,7 +23,7 @@ const BlogItem: FC<BlogItemProps> = ({ frontmatter, excerpt, tags }) => {
         {frontmatter.title}
       </Link>
       <div className='flex flex-col text-sm text-pink-700 text-opacity-75'>
-        <div className='mb-2 sm:mb-0 mr-3'>
+        <div className='mb-2 sm:mb-1 mr-3'>
           {dayjs(frontmatter.date)
             .locale(locale)
             .format(formatMessage({ id: 'date_format' }))}
