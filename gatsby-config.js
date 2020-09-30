@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     author: 'Hai Nguyen',
     githubUrl: 'https://github.com/dinhhai281',
-    title: 'Góc Sáng',
+    title: 'Tấm Chiếu Mới Mua',
     siteUrl: 'https://dinhhai281.github.com/blog',
     description: 'Personal blog by Hai Nguyen',
     keywords: ['Blog', 'React', 'Angular', 'Javascript', 'Typescript', 'Functional Programming'],
